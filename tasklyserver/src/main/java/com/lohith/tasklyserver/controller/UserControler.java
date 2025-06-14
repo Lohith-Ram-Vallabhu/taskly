@@ -33,14 +33,14 @@ public class UserControler {
 	@Autowired
 	private UserService userService;
 	
-	@PostMapping
-	@ResponseBody
-	public ResponseEntity<ResponseWrapper<?>> createUser(@RequestBody User user){
-		try {
-			User createdUser = userService.createUser(user);
-			return ResponseEntity.status(HttpStatus.OK).body(new ResponseWrapper<>(ErrorCode.SUCCESS, createdUser,HttpStatus.OK));
-		}catch(Exception e) {
-			return ResponseEntity.status(HttpStatus.OK).body(new ResponseWrapper<>(ErrorCode.INTERNAL_SERVER_ERROR, "An Error Occured While Creating User",HttpStatus.OK));
-		}
-	}
+//	@PostMapping
+//	@ResponseBody
+//	public ResponseEntity<ResponseWrapper<?>> createUser(@RequestBody User user){
+//		try {
+//			User createdUser = userService.createUser(user);
+//			return ResponseEntity.status(HttpStatus.OK).body(new ResponseWrapper<>(ErrorCode.SUCCESS, createdUser,HttpStatus.OK));
+//		}catch(Exception e) {
+//			return ResponseEntity.status(HttpStatus.OK).body(new ResponseWrapper<>(ErrorCode.INTERNAL_SERVER_ERROR, "An Error Occured While Creating User",HttpStatus.OK));
+//		}
+//	}
 }
